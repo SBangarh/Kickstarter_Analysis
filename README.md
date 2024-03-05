@@ -1,5 +1,5 @@
 # Kickstarter_analysis
-
+MAKING ADJUSTMENTS!
 ## Purpose
 To develop a model that can predict the success or failure of a Kickstarter campaign using data downloaded from [here](https://www.icpsr.umich.edu/web/NADAC/studies/38050). 
 
