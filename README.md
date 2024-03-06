@@ -1,7 +1,8 @@
 # Kickstarter_analysis
 MAKING ADJUSTMENTS!
+
 ## Purpose
-To develop a model that can predict the success or failure of a Kickstarter campaign using data downloaded from [here](https://www.icpsr.umich.edu/web/NADAC/studies/38050). 
+To develop a model that can predict the success or failure of a Kickstarter campaign using data downloaded from [here](https://www.icpsr.umich.edu/web/NADAC/studies/38050). If you want the data you will have to download it from here as it was too big for github and created errors in my version history.
 
 ## About the Data
 Raw data has 21 features and ~507k instances in a tsv file. Data ranges from 2009 to 2020. There are missing values and incorrect classifications like some campaigns have Failed, but the Pledged amount equaled or exceeded the goal. 
@@ -9,8 +10,6 @@ Raw data has 21 features and ~507k instances in a tsv file. Data ranges from 200
 ## File guide
 The raw unclean [data](https://www.icpsr.umich.edu/web/NADAC/studies/38050) was too large to upload so I omitted it, but provided the link.
 So, if you want download the original data see the link above.
-
-Raw_clean_data.csv is the original data with just formatting and data cleaning. No Analysis whatsoever. This is the only data file
 
 ## Process
 
