@@ -18,30 +18,26 @@ First step was to clean and format the data. I made the feature names more conci
 #### Abount the DB
 The database has four tables: Campaigns, Categories, Subcategories, and Countries. Stay tuned for the schema
 
-
-
 ### Exploratory Data Analysis
-Performed EDA here and made some changes to the data. I extracted Month and Year from Launched and Deadline data. I consolidated European countries and Europe and the European Union as the European countries had a choice of currency. I also changed the Status feature values from four to two - Successful and Failed. The US accounted for 73% of my countries which mmakes sense given Kickstarter is US based. The numerical features took a lot of time to explore as two were countinous while the other two were discrete. I explored log transformation, binning, Yeo-Johnson, and Quantile Transformer.
-
-
+Performed EDA here and made some changes to the data. I extracted Month and Year from Launched and Deadline data. I consolidated European countries and Europe and the European Union as the European countries had a choice of currency. I also changed the Status feature values from four to two - Successful and Failed. The US accounted for 73% of my countries which mmakes sense given Kickstarter is US based. The numerical features took a lot of time to explore as two were countinous while the other two were discrete. I explored log transformation, binning, Yeo-Johnson, square root, and Quantile Transformer. Some features required two transformations.
 
 ### Modelling
-I explored three models for Binary Classification (predicting Success or Failed). I explored Logistic Regression, Random Forest Classifier, and XGBoost Classifier. I also performed a base model for each consisting of Standard Scaler and the desired model and added features selection and PCA at each step to compare model performance. Kbest and PCA suggested three components for the optimal model.
+I explored three models for Binary Classification (predicting Success or Failed). I explored Logistic Regression just as a starting point. My base model was the raw data for the numerical features only. I then passed the transformed data to the model. Prior to evaluating the model, I used cross validation to determine how my model would react to unseen data in both cases. If the scores were "acceptable" - above 70%, I proceeded with the model.
 
 
 ## Results
-- The United States accounted for 73% of the data on I focused soley on this
-- Logistic Regression with PCA (3 components) yielded the best model with 88% accuracy and a lower Log loss value on the test data. 
-- The Random Forest Classifier and XGBoost classifier were highly prone to over fitting even with pca
+- The USA accounted for 73% of my data and given Kickstarter is an American company I focused on the Campaigns specific to the US.
+- The cross validation scores for the raw data ranged from 0.86 to less than 0.88, but applying the applicable transformation it increased to in between 0.98 and 0.99
+- Logistic Regression with the transformed data yielded a model with a 0.99% accuracy and a balanced accuracy score of 0.9896 on the training data and 0.9887 on the test data
+
 
 ## Challenges
-- Rabbit holes - Curiosity is good, but evenutally I'm just chasing my own tail
-- I think I got over zealous on feature engineering and hurt my model. I should do the base data then slowly add features
+- Motivation and rabbit holes - I need to go a bit slower and explore the data more methodically; going down rabbit holes without anything to show for it destroys my motivation
 - notebook orgainzation!!!! I need to tidy up my work. I am going to revisit my projects over the coming weeks
 
 ## Future Goals
 - Notebook organization,
-- practice more. I'd like to do a project once a week or once every two weeks,
+- Stay consistent and remember to have fun
 
 
 # Kickstarter_Analysis
