@@ -37,4 +37,3 @@ I explored three models for Binary Classification (predicting Success or Failed)
 
 
 
-# Kickstarter_Analysis
